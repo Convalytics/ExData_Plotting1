@@ -3,7 +3,7 @@
 # Course Project 1
 # Jason Green
 # 1/11/2015
-# Plot 1
+# Plot 2
 ##############################
 
 # Set the working directory.
@@ -25,8 +25,9 @@ data$DateTime <- paste(data$Date, data$Time)
 data$DateTime <- strptime(data$DateTime, format='%d/%m/%Y %H:%M:%S')
 
 # Plot the chart.
-hist(data$Global_active_power, xlab='Global Active Power (kilowatts)', main='Global Active Power', col='red')
+plot(data$DateTime,data$Global_active_power, xlab='', ylab='Global Active Power (kilowatts)', main='', type='line')
 
 # Create a PNG file from the plot.
-dev.copy(png, file="plot1.png", height=480, width=480, units='px')
+dev.copy(png, file="plot2.png", height=480, width=480, units='px')
 dev.off()
+
